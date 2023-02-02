@@ -13,7 +13,9 @@ public class Item {
         this.desc = desc;
         this.value = value;
 
-
+    }
+    public String toString() {
+        return String.format("%s\nDescription: %s\nValue: %d", this.name, this.desc, this.value);
     }
 
 }
