@@ -31,5 +31,28 @@ public class Main {
         //Arrow
         Arrow arrow1 = new Arrow();
         //System.out.println(arrow1);
+ //Enemy
+        Enemy enemy = new Enemy("Biplob", 500, 50);
+        //System.out.println("Enemy name: " + enemy.name  +"\n"+"Enemy HP: " + enemy.hp+"\n"+ "Enemy damage: " + enemy.damage);
+       // System.out.println("Is enemy alive: " + enemy.isAlive());
+//Ogre
+        Ogre  greenOgre = new Ogre ();
+        Ogre  redOgre = new Ogre ();
+        //System.out.println(redOgre);
+//Zombie
+        Zombie  slowZombie = new Zombie ();
+        Zombie  fastZombie = new Zombie ();
+        //System.out.println(fastZombie);
+//Dog
+        Dog spotDog = new Dog ();
+       // System.out.println(spotDog);
+//GiantSpider
+        GiantSpider  g= new GiantSpider   ();
+        //System.out.println(g);
+//Bee (My self)
+        Bee biplob = new Bee ();
+        //System.out.println(biplob);
+
+
     }
 }
