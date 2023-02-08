@@ -50,8 +50,11 @@ public class Main {
         GiantSpider  g= new GiantSpider   ();
         //System.out.println(g);
 //Bee (My self)
-        Bee biplob = new Bee ();
-        //System.out.println(biplob);
+
+        Bee biplob = new Bee();
+         System.out.println(biplob);
+        biplob.setAttack("Bee King");
+        System.out.println("Attacker name is: " + biplob.getAttack());
 
 
     }
