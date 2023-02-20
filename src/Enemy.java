@@ -9,6 +9,10 @@ public class Enemy {
         this.damage = damage;
     }
 
+    public Enemy() {
+
+    }
+
     public boolean isAlive() {
         return (this.hp > 0);
     }
