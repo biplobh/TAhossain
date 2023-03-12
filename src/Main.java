@@ -1,6 +1,9 @@
 //import java.lang.reflect.Method;
 import java.util.*;
-
+import java.io.*;
+//import java.io.BufferedReader;
+//import java.io.FileReader;
+//import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 /*
@@ -148,12 +151,40 @@ public class Main {
         System.out.println("Keyword Arguments: " + MoveWestAction.getKwargs());
 
          */
+        /*
         //Center
         Center CenterAction = new Center();
 
         System.out.println("Action Name: " + CenterAction.getName());
         System.out.println("Hotkey: " + CenterAction.getHotkey());
         System.out.println("Keyword Arguments: " + CenterAction.getKwargs());
+*/
+
+        //World
+        //MapTile
+
+        // Read the map file into an ArrayList
+
+        ArrayList<String> map = new ArrayList<String>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader
+                    ("src/map.txt"));
+            String line;
+            while ((line = reader.readLine()) != null) // Read each line of the file and add it to the ArrayList
+            {
+                map.add(line);
+            }
+            reader.close();
+        } catch (Exception e)  // Catch any exceptions if something error
+        {
+            e.printStackTrace();
+            System.out.println("File does not exist");
+        }
+
+        // Print property from map
+        for (String line : map) {
+            System.out.println(line);
+        }
 
     }
 }
