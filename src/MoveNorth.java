@@ -4,7 +4,7 @@ public class MoveNorth extends Action {
     //Constructor method
     public MoveNorth(){
 
-        super(null, "Move North", 'n', null);
+        super(null, "Move North", 'n', null, 5,9);
     }
 
     }
