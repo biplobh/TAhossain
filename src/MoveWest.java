@@ -1,9 +1,5 @@
-import java.lang.reflect.Method;
-
-public class MoveWest extends Action {
-    // Constructor method
-    public MoveWest() {
-        super(null, "Move West", 'W', null,5,8);
-
+public class MoveWest extends Action{
+    public MoveWest(){
+        super(Method.MoveWest, "Move West", 'w', null);
     }
 }

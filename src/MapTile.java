@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class MapTile {
     private int x;
     private int y;
@@ -6,28 +9,52 @@ public class MapTile {
         this.x = x;
         this.y = y;
     }
-    // Getter method that return x
-    public int getX() {
-        return x;
-    }
-    // Getter method that return y
-    public int getY() {
-        return y;
-    }
-//The MapTile class will contain a public method adjacent_moves()
-// that handles all move actions (x or y position) for the adjacent tiles
-    public MapTile[] adjacent_moves() {
-        // Create an array of 4 MapTiles to hold the adjacent moves
-        MapTile[] moves = new MapTile[4];
 
-        // move right
-        moves[0] = new MapTile(x + 1, y);
-        // left
-        moves[1] = new MapTile(x - 1, y);
-        // up
-        moves[2] = new MapTile(x, y + 1);
-        // down
-        moves[3] = new MapTile(x, y - 1);
-        return moves;  // Return the array of adjacent MapTiles
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + x;
+        result = prime * result + y;
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        MapTile other = (MapTile) obj;
+        return x == other.x && y == other.y;
+    }
+
+    public void playerInfo(Player player) throws IOException {
+        // Implementation goes here
+    }
+
+    public String intro_text() {
+        return "Welcome!";
+    }
+
+    public ArrayList<Action> adjacent_moves() {
+        ArrayList<Action> moves = new ArrayList<Action>();
+        if (World.tile_exists(x, y + 1) != null)
+            moves.add(new MoveEast()); // moves east
+        if (World.tile_exists(x, y - 1) != null)
+            moves.add(new MoveWest()); // moves west
+        if (World.tile_exists(x - 1, y) != null)
+            moves.add(new MoveNorth()); // moves north
+        if (World.tile_exists(x + 1, y) != null)
+            moves.add(new MoveSouth()); // moves south
+
+        return moves;
+    }
+
+    public ArrayList<Action> available_actions() {
+        ArrayList<Action> moves = adjacent_moves();
+        moves.add(new ViewInventory());
+
+        return moves;
     }
 }

@@ -1,9 +1,5 @@
-import java.lang.reflect.Method;
-
-public class Center extends Action {
-    // Constructor method
+public class Center extends Action{
     public Center() {
-        super(null, "Center", 'C', null, 4, 6);
-
+        super(Method.Center, "Center", 'c', null);
     }
 }

@@ -3,20 +3,19 @@ public class Enemy {
     protected int hp;
     protected int damage;
 
-    public Enemy(String name, int hp, int damage) {
+    public Enemy(String name, int hp, int damage){
         this.name = name;
         this.hp = hp;
         this.damage = damage;
     }
 
-    public Enemy() {
-
+    public String getName() {return name;}
+    public boolean IsAlive(){
+        return(this.hp > 0);
     }
+    public static boolean Isthreat = false;
 
-    public boolean isAlive() {
-        return (this.hp > 0);
-    }
     public String toString() {
-        return String.format("%s\nDescription: %s\nValue: %d", this.name, this.hp, this.damage);
+        return String.format("%s Damage: %s \nHealth: %d \n", this.name, this.damage, this.hp);
     }
 }

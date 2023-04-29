@@ -198,7 +198,7 @@ public class Main {
         System.out.println("Damage: " + Self_DefinedAction.getDamage());
         System.out.println("Range: " + Self_DefinedAction.getRange() + " Meter");
 */
-
+/*
         List <Method> list = new ArrayList<>();
         list.add(Method.Flee);
         list.add(Method.Attack);
@@ -216,7 +216,7 @@ public class Main {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
-
+*/
 
         /*
         System.out.println("\nOption 2: ");

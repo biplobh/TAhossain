@@ -1,6 +1,5 @@
-
 public class Arrow extends Weapon {
-    public Arrow() {
-        super("Arrow Weapon", "A long wooden with sharp end point", 5, 40);
+    public Arrow(String name, String desc, int value, int damage) {
+        super ( "Long Bow Arrow", "An Arrow. that take out enemy with all its might", 5, 30);
     }
 }

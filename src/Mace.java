@@ -1,5 +1,6 @@
-public class Mace extends Weapon {
-    public Mace() {
-        super("Mace", "A Mace. Somewhat more dangerous than a Sword.", 15, 65);
+public class Mace extends Weapon{
+
+    public Mace(String name, String desc, int value, int damage) {
+        super("Mace", "A mace somewhat more dangerous than a sword", 10, 30);
     }
 }
